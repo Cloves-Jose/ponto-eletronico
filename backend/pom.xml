@@ -33,6 +33,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/ant/ant -->
+		<dependency>
+		    <groupId>ant</groupId>
+		    <artifactId>ant</artifactId>
+		    <version>1.6.5</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
