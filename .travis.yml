@@ -1,6 +1,6 @@
 language: java
 jdk:
   - openjdk11
-script: ./backend/build
+script: ant build
 before_install:
   - chmod +x ./backend/mvnw
