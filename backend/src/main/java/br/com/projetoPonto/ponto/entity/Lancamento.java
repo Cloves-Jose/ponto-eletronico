@@ -46,7 +46,7 @@ public class Lancamento implements Serializable{
 	
 	public Lancamento() {}
 	
-	public Lancamento (Date data, String descricao, String localizacao, Date dataCriacao, Date DataAtualizacao, TipoEnum tipo,
+	public Lancamento (Date data, String descricao, String localizacao, Date dataCriacao, Date dataAtualizacao, TipoEnum tipo,
 			Funcionario funcionario) {
 		this.data = data;
 		this.descricao = descricao;
