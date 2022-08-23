@@ -37,9 +37,9 @@ public class Empresa implements Serializable{
 	private List<Funcionario> funcionarios;
 	
 	
-	private Empresa() {}
+	public Empresa() {}
 	
-	private Empresa(String razaoSocial, String cnpj, Date dataCriacao, Date dataAtualizacao) {
+	public Empresa(String razaoSocial, String cnpj, Date dataCriacao, Date dataAtualizacao) {
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
 		this.dataCriacao = dataCriacao;
