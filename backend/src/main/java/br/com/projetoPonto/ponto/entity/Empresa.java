@@ -39,11 +39,9 @@ public class Empresa implements Serializable{
 	
 	public Empresa() {}
 	
-	public Empresa(String razaoSocial, String cnpj, Date dataCriacao, Date dataAtualizacao) {
+	public Empresa(String razaoSocial, String cnpj) {
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
-		this.dataCriacao = dataCriacao;
-		this.dataAtualizacao = dataAtualizacao;
 	}
 
 	public Long getId() {
