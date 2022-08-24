@@ -22,7 +22,6 @@ public class Empresa implements Serializable{
 	
 	private static final long serialVersionUID = 3960436649365666213L;
 	
-	
 	private Long id;
 	private String razaoSocial;
 	private String cnpj;
@@ -33,7 +32,7 @@ public class Empresa implements Serializable{
 	public Empresa() {}
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
