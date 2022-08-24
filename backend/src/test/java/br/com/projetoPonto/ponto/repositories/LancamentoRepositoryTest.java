@@ -76,8 +76,6 @@ public class LancamentoRepositoryTest {
 		assertEquals(2, lancamentos.getTotalElements());
 	}
 	
-	
-	
 	private Lancamento obterDadosLancamentos(Funcionario funcionario) {
 		Lancamento lancamento = new Lancamento();
 		lancamento.setData(new Date());
@@ -85,8 +83,6 @@ public class LancamentoRepositoryTest {
 		lancamento.setFuncionario(funcionario);
 		return lancamento;
 	}
-
-
 
 	private Funcionario obterDadosFuncionario(Empresa empresa) {
 		Funcionario funcionario = new Funcionario();

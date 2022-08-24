@@ -1,5 +1,0 @@
-language: java
-jdk:
-  - openjdk11
-before_intall:
-  - chmod +x ./backend/mvnw
