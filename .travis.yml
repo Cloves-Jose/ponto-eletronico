@@ -1,6 +1,0 @@
-language: java
-jdk: 
-  - openjdk11
-script: ant build
-before_install:
-  - chmod +x ./backend/mvnw
