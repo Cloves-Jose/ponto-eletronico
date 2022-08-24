@@ -33,8 +33,6 @@ public class Lancamento implements Serializable{
 	private Date dataCriacao;
 	private Date dataAtualizacao;
 	private TipoEnum tipo;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
 	private Funcionario funcionario;
 	
 	public Lancamento() {}
