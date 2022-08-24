@@ -32,7 +32,7 @@ public class Empresa implements Serializable{
 	public Empresa() {}
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
