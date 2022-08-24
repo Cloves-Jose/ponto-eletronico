@@ -1,6 +1,6 @@
 language: java
 jdk: 
   - openjdk11
-script: ./mvnw clean install
+script: ant build
 before_install:
   - chmod +x ./backend/mvnw
