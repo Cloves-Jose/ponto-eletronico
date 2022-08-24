@@ -19,7 +19,7 @@ import br.com.projetoPonto.ponto.entity.Empresa;
 public class EmpresaRepositoryTest {
 	
 	@Autowired
-	private EmpresaRepository empresaRepostory;
+	private EmpresaRepository empresaRepository;
 	
 	private static final String CNPJ = "95201293000181";
 	
@@ -28,17 +28,17 @@ public class EmpresaRepositoryTest {
 		Empresa empresa = new Empresa();
 		empresa.setRazaoSocial("Empresa de exemplo");
 		empresa.setCnpj(CNPJ);
-		this.empresaRepostory.save(empresa);
+		this.empresaRepository.save(empresa);
 	}
 	
 	@After
 	public final void tearDown() {
-		this.empresaRepostory.deleteAll();
+		this.empresaRepository.deleteAll();
 	}
 	
 	@Test
 	public void testBuscarPoCnpj() {
-		Empresa empresa = this.empresaRepostory.findByCnpj(CNPJ);
+		Empresa empresa = this.empresaRepository.findByCnpj(CNPJ);
 		
 		assertEquals(CNPJ, empresa.getCnpj());
 	}

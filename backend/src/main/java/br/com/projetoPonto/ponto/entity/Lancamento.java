@@ -24,39 +24,23 @@ import br.com.projetoPonto.ponto.enums.TipoEnum;
 @Table(name = "lancamento")
 public class Lancamento implements Serializable{
 	
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	private static final long serialVersionUID = 6524560251526772839L;
+
 	private Long id;
-	@Temporal(TemporalType.TIMESTAMP)
 	private Date data;
-	@Column(name = "descricao", nullable = true)
 	private String descricao; 
 	private String localizacao;
-	@Column(name = "data_criacao", nullable = false)
 	private Date dataCriacao;
-	@Column(name = "data_atualizacao", nullable = false)
 	private Date dataAtualizacao;
-	@Enumerated(EnumType.STRING)
-	@Column(name = "tipo", nullable = false)
 	private TipoEnum tipo;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Funcionario funcionario;
 	
 	public Lancamento() {}
-	
-	public Lancamento (Date data, String descricao, String localizacao, Date dataCriacao, Date dataAtualizacao, TipoEnum tipo,
-			Funcionario funcionario) {
-		this.data = data;
-		this.descricao = descricao;
-		this.localizacao = localizacao;
-		this.dataCriacao = dataCriacao;
-		this.dataAtualizacao = dataAtualizacao;
-		this.tipo = tipo;
-		this.funcionario = funcionario;
-	}
 
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -65,6 +49,8 @@ public class Lancamento implements Serializable{
 		this.id = id;
 	}
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data", nullable = false)
 	public Date getData() {
 		return data;
 	}
@@ -73,6 +59,7 @@ public class Lancamento implements Serializable{
 		this.data = data;
 	}
 
+	@Column(name = "descricao", nullable = true)
 	public String getDescricao() {
 		return descricao;
 	}
@@ -80,7 +67,8 @@ public class Lancamento implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
+	
+	@Column(name = "localizacao", nullable = true)
 	public String getLocalizacao() {
 		return localizacao;
 	}
@@ -89,6 +77,7 @@ public class Lancamento implements Serializable{
 		this.localizacao = localizacao;
 	}
 
+	@Column(name = "data_criacao", nullable = false)
 	public Date getDataCriacao() {
 		return dataCriacao;
 	}
@@ -97,6 +86,7 @@ public class Lancamento implements Serializable{
 		this.dataCriacao = dataCriacao;
 	}
 
+	@Column(name = "data_atualizacao", nullable = false)
 	public Date getDataAtualizacao() {
 		return dataAtualizacao;
 	}
@@ -105,6 +95,8 @@ public class Lancamento implements Serializable{
 		this.dataAtualizacao = dataAtualizacao;
 	}
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo", nullable = false)
 	public TipoEnum getTipo() {
 		return tipo;
 	}
@@ -113,6 +105,7 @@ public class Lancamento implements Serializable{
 		this.tipo = tipo;
 	}
 
+	@ManyToOne(fetch = FetchType.EAGER)
 	public Funcionario getFuncionario() {
 		return funcionario;
 	}
