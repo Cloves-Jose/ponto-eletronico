@@ -3,5 +3,3 @@ jdk:
   - openjdk11
 before_intall:
   - chmod +x ./backend/mvnw
-script: ./mvnw clean install
-
