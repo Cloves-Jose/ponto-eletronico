@@ -1,9 +1,10 @@
-version: 2
+version: 2.0
+
 jobs:
   build:
     docker:
       - image: cimg/openjdk:17.0.1
-
     steps:
       - checkout
       - run: ./mvnw package
+
