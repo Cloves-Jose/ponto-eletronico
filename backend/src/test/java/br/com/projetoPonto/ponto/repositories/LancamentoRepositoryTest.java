@@ -2,9 +2,6 @@ package br.com.projetoPonto.ponto.repositories;
 
 import static org.junit.Assert.assertEquals;
 
-import static org.junit.Assert.assertEquals;
-
-import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.List;
 
