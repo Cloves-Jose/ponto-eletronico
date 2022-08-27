@@ -37,7 +37,7 @@ public class EmpresaControllerTest {
 	
 	private static final String BUSCAR_EMPRESA_CNPJ_URL = "/api/empresas/cnpj/";
 	private static final Long ID = Long.valueOf(1);
-	private static final String CNPJ = "72643120035";
+	private static final String CNPJ = "51463645000100";
 	private static final String RAZAO_SOCIAL = "Empresa XYZ";
 	
 	@Test
@@ -47,9 +47,9 @@ public class EmpresaControllerTest {
 
 		mvc.perform(MockMvcRequestBuilders.get(BUSCAR_EMPRESA_CNPJ_URL + CNPJ).accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isBadRequest())
-				.andExpect(jsonPath("$.errors").value("Empresa não encontrada para o CNPJ" + CNPJ));
+				.andExpect(jsonPath("$.errors").value("Empresa não encontrada para o CNPJ " + CNPJ));
 	}
-	
+
 	@Test
 	@WithMockUser
 	public void testBuscarEmpresaCnpjValido() throws Exception {
@@ -64,7 +64,7 @@ public class EmpresaControllerTest {
 				.andExpect(jsonPath("$.data.cnpj", equalTo(CNPJ)))
 				.andExpect(jsonPath("$.errors").isEmpty());
 	}
-	
+
 	private Empresa obterDadosEmpresa() {
 		Empresa empresa = new Empresa();
 		empresa.setId(ID);
