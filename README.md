@@ -4,6 +4,7 @@ Este projeto foi desenvolvido com o principal intuito de de aprender os principa
 como por exemplo: 
 
 - Injeção de dependências
+- Inversão de controle
 - Arquitetura MVC
 
 Para isso foi desenvovido um CRUD básico de um sistema de ponto eletrônico que utiliza dos conceitos acima citados 
