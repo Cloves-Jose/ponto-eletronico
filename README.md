@@ -28,7 +28,7 @@ A documentação da API foi criada utilizando o Swagger. Link abaixo
 
 http://localhost:8080/swagger-ui/
 
-## Modelagem entitdade relacional (MER)
+## Modelagem entidade relacional (MER)
 
 O diagram entidade relacional pode visualizado por meio do link abaixo.
 
