@@ -20,7 +20,7 @@ foi utilizado o repositório `spring-boot-starter-data-jpa`.
 ## Testes
 
 Para o desenvolvimento dos testes foi criada um novo arquivo `application-test.properties`. Nos testes a comunicação
-da aplicação foi feita através do banco de dados em memória H2.
+da aplicação foi feita através do banco de dados em memória H2. Todos os testes foi utilizado o JUnit.
 
 ## Documentação 
 
